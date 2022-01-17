@@ -7,7 +7,7 @@ datas = file.read().split("\n")
 
 # write header to csv
 with open("clean_data.csv", encoding="utf8", mode = "w", newline='') as file_csv:
-    header = ["sbd", "tên", "dd", "mm", "yyyy", "toán", "ngữ văn", "khxn", "khtn", "lịch sử", "địa lí", "gdcd", "sinh học", "vật lí", "hóa học", "tiếng anh"]
+    header = ["sbd", "tên", "dd", "mm", "yyyy", "toán", "ngữ văn", "khxh", "khtn", "lịch sử", "địa lí", "gdcd", "sinh học", "vật lí", "hóa học", "tiếng anh"]
     writer = csv.writer(file_csv)
     writer.writerow(header)
 
@@ -102,7 +102,7 @@ for data in datas:
     data = [sbd_str, name.title(), str(dd), str(mm), str(yyyy)]
 
     # add score to data
-    for subject in ["toán", "ngữ văn", "khxn", "khtn", "lịch sử", "địa lí", "gdcd", "sinh học", "vật lí", "hóa học", "tiếng anh"]:
+    for subject in ["toán", "ngữ văn", "khxh", "khtn", "lịch sử", "địa lí", "gdcd", "sinh học", "vật lí", "hóa học", "tiếng anh"]:
         if subject in scores_list:
             data.append(str(float(scores_list[scores_list.index(subject) + 1])))
         else:
