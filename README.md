@@ -5,7 +5,7 @@
 ---
 **Objective:**
 - Learn how to clean data curling from a website using Python
-- Apply several analytic concepts to choose suitable charts and draw them using Python
+- Apply several analytic concepts to choose suitable charts and draw them using matplotlib library 
 - Switch mindset from depending on Excel to using Python to solve complex data science problem
 - Learn how to use SQL to create a database using clean data extracted and write queries to assess analyzed results
 
@@ -43,3 +43,25 @@ From the clean database, I created some charts to answers some of my questions a
 - Were there any candidates that were older or younger than the general age of candidates in 2020?
 
 **A. How many students did not sit for each subject exam?**
+
+To find the numbers of students who did not sit for each subject exam, first I created a loop through students to find students who did not take the exam then store them as a list: 
+![img_5.png](img_5.png)
+The result I got was:
+[265, 1802, 49223, 32496, 44131, 44847, 49353, 31849, 31591, 31356, 8709]
+
+Using Matplotlib, I got a barchart indicating these numbers:
+![img_7.png](img_7.png)
+Double-check the extracted numbers by randomly choose three subjects: Math, Natural Science, and Chemistry using SELECT COUNT query:
+![img_8.png](img_8.png)
+![img_9.png](img_9.png)
+![img_10.png](img_10.png)
+Three randomly selected columns showed a match with the chart coded by Python, I concluded that the result was well completed.
+
+***Insight:***
+- Students who did not sit for natural science generally did not sit for chemistry, biology, and physics. It is easily understandable as chemistry, biology, and physics are natural science and are used to create the natural science exam.
+- On the other side, even though it can be claimed that students who did not sit for social science had considerably high tendency to not take history, geographic, and physics, there are still gaps existing with around five thousands as shown.
+- There were not a lot of students who did not participate in the Math exam. This is due to the fact that math, literature, and english are required exams and not avoidable.
+
+Reversely, I computed a chart showing the number of students taking each exam component:
+![img_11.png](img_11.png)
+
