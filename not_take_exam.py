@@ -53,7 +53,7 @@ plt.xticks(y_pos, subjects)
 # set limit to y axis
 axis.set_ylim(0,100)
 
-# lbale and title 
+# lable and title
 plt.ylabel('Percentage')
 plt.title('The numbers of student did not take or did not sign up for an exam')
 
