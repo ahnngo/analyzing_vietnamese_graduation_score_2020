@@ -45,16 +45,22 @@ From the clean database, I created some charts to answers some of my questions a
 **A. How many students did not sit for each subject exam?**
 
 To find the numbers of students who did not sit for each subject exam, first I created a loop through students to find students who did not take the exam then store them as a list: 
+
 ![img_5.png](img_5.png)
+
 The result I got was:
 [265, 1802, 49223, 32496, 44131, 44847, 49353, 31849, 31591, 31356, 8709]
 
 Using Matplotlib, I got a barchart indicating these numbers:
+
 ![img_7.png](img_7.png)
+
 Double-check the extracted numbers by randomly choose three subjects: Math, Natural Science, and Chemistry using SELECT COUNT query:
+
 ![img_8.png](img_8.png)
 ![img_9.png](img_9.png)
 ![img_10.png](img_10.png)
+
 Three randomly selected columns showed a match with the chart coded by Python, I concluded that the result was well completed.
 
 ***Insight:***
