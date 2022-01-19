@@ -38,17 +38,27 @@ for i in range(len(number_of_exams_taken)):
 for i in range(len(combination_percentage)):
     combination_percentage[i] = round((number_of_exams_taken[i]/total_combination*100),2)
 
-
-import matplotlib.pyplot as plt
 print(combination_percentage)
+
+# selecting outstanding data for visualization
+combination_for_chart = []
+other = 0
+for i in range(len(number_of_exams_taken)):
+    if number_of_exams_taken[i] > 2000:
+        combination_for_chart.append(number_of_exams_taken[i])
+    else:
+        other += number_of_exams_taken[i]
+combination_for_chart.append(other)
+
+from cProfile import label
+import matplotlib.pyplot as plt
+import numpy as np
+
 # Pie chart, where the slices will be ordered and plotted counter-clockwise:
-labels = 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11
-sizes = [0.0, 0.11, 0.16, 3.49, 5.82, 0.43, 3.67, 86.32, 0.0, 0.0, 0.0, 0.0]
+y = np.array(combination_for_chart)
+mylabels = [None, None, None, "86.32%", None]
+myexplode = [0, 0, 0, 0.2, 0]
 
-fig1, ax1 = plt.subplots()
-ax1.pie(sizes, labels=labels, autopct='%1.1f%%', startangle=90)
-ax1.axis('equal')  # Equal aspect ratio ensures that pie is drawn as a circle.
-
-print(len(students) == total_combination)
-
-plt.show()
+plt.pie(y, labels = mylabels, startangle = 90, explode = myexplode)
+plt.legend(title = "Number of exams by students:", loc='upper right', labels=["3 subjects", "4 subjects", "6 subjects", "7 subjects", "others"])
+plt.show() 
