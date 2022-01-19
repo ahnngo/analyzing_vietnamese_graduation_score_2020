@@ -38,7 +38,7 @@ Several first lines of my clean_data in pgAdmin:
 # Analyzing Data
 I made some charts using the clean database to answer some of my inquiries concerning candidates for the 2020 Vietnamese Graduation Exams in Ho Chi Minh City. These are some of them:
 - How many students did not take the exam for each subject, such as Math and History? What is the cause of this occurrence?
-- Which topic exam did the majority of students take?
+- How many subjects did the majority of students take?
 - What were the subjects' median, mode, and mean scores?
 - Did the system have any specific errors?
 - Were there any candidates in 2020 who were older or younger than the general candidate age (18)?
@@ -53,6 +53,7 @@ The result I got was:
 Using Matplotlib, I got a bar graph indicating these numbers:
 ![img_7.png](Images/img_7.png)
 Using the SELECT COUNT query, double-check the retrieved numbers by selecting three subjects at random - Math, Natural Science, and Chemistry:
+
 ![img_8.png](Images/img_8.png)
 ![img_9.png](Images/img_9.png)
 ![img_10.png](Images/img_10.png)
@@ -66,3 +67,14 @@ Three randomly selected columns showed a match with the chart coded by Python, I
 Reversely, I computed a chart showing the number of students taking each exam component:
 ![img_11.png](Images/img_11.png)
 
+**B. How many subjects did the majority of students take?**
+
+To create this questions, a pie chart will be a good tool for demonstration. Based on previous data manipulation, I created a loop to calculate the number of subjects each student took, then add to a variable called number_of_exams_taken, which is a list containing the number of students taking 1 subjects only, 2 subjects, 3 subjects, ..., to 11 subjects.
+
+Here is the result: [0, 80, 122, 2598, 4334, 318, 2730, 64261, 0, 0, 0, 1]
+
+Using Matplotlib, I successfully created a pie chart describing the stated information:
+![img_1.png](img_1.png)
+
+***Insight:***
+- In all, the number of students taking seven subjects outnumbers all others. Comprehensively, because Math, Literature, and English were required for all students, each applicant had to pick between a social science exam, which included History, Geography, and Civics, and a natural science exam, which included Physics, Chemistry, and Biology.
