@@ -74,7 +74,7 @@ To create this questions, a pie chart will be a good tool for demonstration. Bas
 Here is the result: [0, 80, 122, 2598, 4334, 318, 2730, 64261, 0, 0, 0, 1]
 
 Using Matplotlib, I successfully created a pie chart describing the stated information:
-![img_1.png](img_1.png)
+![img_1.png](Images/img_12.png)
 
 ***Insight:***
 - In all, the number of students taking seven subjects outnumbers all others. Comprehensively, because Math, Literature, and English were required for all students, each applicant had to pick between a social science exam, which included History, Geography, and Civics, and a natural science exam, which included Physics, Chemistry, and Biology.
