@@ -52,7 +52,7 @@ The result I got was:
 
 Using Matplotlib, I got a bar graph indicating these numbers:
 ![img_7.png](img_7.png)
-Using the SELECT COUNT query, double-check the retrieved numbers by selecting three subjects at random: Math, Natural Science, and Chemistry:
+Using the SELECT COUNT query, double-check the retrieved numbers by selecting three subjects at random - Math, Natural Science, and Chemistry:
 ![img_8.png](img_8.png)
 ![img_9.png](img_9.png)
 ![img_10.png](img_10.png)
