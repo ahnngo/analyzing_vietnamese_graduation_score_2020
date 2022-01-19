@@ -23,17 +23,17 @@ When a Vietnamese student reaches the age of 18, they are required to take the V
 # Cleaning Data
 Curl all information on student scores from the Education & Training Department of HCMC, Vietnam's website, using their ids.
 The first id was 2000001, and the latest id was 2074719, as determined by various testing (All raw data was extracted in the year of 2020, leading to the fact that running the code at the moment may cause errors)
-![img.png](img.png)
+![img.png](Images/img.png)
 All of the data obtained was not cleansed, and there were tags, superfluous codes, and unsupported symbols that needed to be converted to utf8.
 I applied the same code to the entire dataset using readline() after coding to process one line and ensuring that it worked properly. Several lines of raw_data.txt:
-![img_4.png](img_4.png)
+![img_4.png](Images/img_4.png)
 However, upon cleaning the entire dataset, I discovered that certain ids were "missing," resulting in a list index that was out of range. To avoid this, I used a try - except condition to catch all non-existent ids and then returned them to the for loop in an if condition. *error id.txt* contains non-existent ids.
 
 I imported csv module to save my clean_data as csv file, as I would use it create a database in pgAdmin and apply some queries using SQL.
 Several first lines of my clean_data in VSCode:
-![img_2.png](img_2.png)
+![img_2.png](Images/img_2.png)
 Several first lines of my clean_data in pgAdmin:
-![img_3.png](img_3.png)
+![img_3.png](Images/img_3.png)
 ---
 # Analyzing Data
 I made some charts using the clean database to answer some of my inquiries concerning candidates for the 2020 Vietnamese Graduation Exams in Ho Chi Minh City. These are some of them:
@@ -46,16 +46,16 @@ I made some charts using the clean database to answer some of my inquiries conce
 **A. How many students did not take the exam for each subject?**
 
 To identify the number of students who did not sit for each subject exam, I first established a loop through students to find students who did not sit for the exam, and then I stored them as a list:
-![img_5.png](img_5.png)
+![img_5.png](Images/img_5.png)
 The result I got was:
 [265, 1802, 49223, 32496, 44131, 44847, 49353, 31849, 31591, 31356, 8709]
 
 Using Matplotlib, I got a bar graph indicating these numbers:
-![img_7.png](img_7.png)
+![img_7.png](Images/img_7.png)
 Using the SELECT COUNT query, double-check the retrieved numbers by selecting three subjects at random - Math, Natural Science, and Chemistry:
-![img_8.png](img_8.png)
-![img_9.png](img_9.png)
-![img_10.png](img_10.png)
+![img_8.png](Images/img_8.png)
+![img_9.png](Images/img_9.png)
+![img_10.png](Images/img_10.png)
 Three randomly selected columns showed a match with the chart coded by Python, I concluded that the result was well completed.
 
 ***Insight:***
@@ -64,5 +64,5 @@ Three randomly selected columns showed a match with the chart coded by Python, I
 - The number of students who did not take the Math exam was rather low. This is because math, literature, and English are obligatory tests that cannot be avoided.
 
 Reversely, I computed a chart showing the number of students taking each exam component:
-![img_11.png](img_11.png)
+![img_11.png](Images/img_11.png)
 
