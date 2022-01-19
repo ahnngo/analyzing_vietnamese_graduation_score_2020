@@ -23,7 +23,7 @@ When a Vietnamese student reaches the age of 18, they are required to take the V
 # Cleaning Data
 Curl all information on student scores from the Education & Training Department of HCMC, Vietnam's website, using their ids.
 The first id was 2000001, and the latest id was 2074719, as determined by various testing (All raw data was extracted in the year of 2020, leading to the fact that running the code at the moment may cause errors)
-![img.png](Images/img.png)
+![img.png](Images/img.png)!
 All of the data obtained was not cleansed, and there were tags, superfluous codes, and unsupported symbols that needed to be converted to utf8.
 I applied the same code to the entire dataset using readline() after coding to process one line and ensuring that it worked properly. Several lines of raw_data.txt:
 ![img_4.png](Images/img_4.png)
