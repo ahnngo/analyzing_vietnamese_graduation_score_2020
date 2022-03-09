@@ -69,7 +69,7 @@ Reversely, I computed a chart showing the number of students taking each exam co
 
 **B. How many subjects did the majority of students take?**
 
-To create this questions, a pie chart will be a good tool for demonstration. Based on previous data manipulation, I created a loop to calculate the number of subjects each student took, then add to a variable called number_of_exams_taken, which is a list containing the number of students taking 1 subjects only, 2 subjects, 3 subjects, ..., to 11 subjects.
+To answer this questions, a pie chart will be a good tool for demonstration. Based on previous data manipulation, I created a loop to calculate the number of subjects each student took, then add to a variable called number_of_exams_taken, which is a list containing the number of students taking 1 subjects only, 2 subjects, 3 subjects, ..., to 11 subjects.
 
 Here is the result: [0, 80, 122, 2598, 4334, 318, 2730, 64261, 0, 0, 0, 1]
 
@@ -78,3 +78,18 @@ Using Matplotlib, I successfully created a pie chart describing the stated infor
 
 ***Insight:***
 - In all, the number of students taking seven subjects outnumbers all others. Comprehensively, because Math, Literature, and English were required for all students, each applicant had to pick between a social science exam, which included History, Geography, and Civics, and a natural science exam, which included Physics, Chemistry, and Biology.
+
+**C. Is that true the older the candidate was, the worse they performed?**
+
+To prove whether the previous statement is correct or not, I will create a bar plot chart, where the bars will represent the number of students in a certain age group, while the plot chart will indicate the average score of that age group.
+
+The numbers of students in each age group (from 17, 18, 19,... to 26 and over 26) are:  
+[2, 66327, 4463, 1396, 767, 384, 300, 223, 177, 109, 296]
+
+Going a long with those numbers of candidates are their average scores:
+[7.953571428571427, 6.5918319968812815, 6.320837698711778, 6.279510148042031, 6.026032408269695, 5.99014415922619, 5.950773412698415, 5.798367926542815, 6.069723567393057, 5.911239405854082, 6.164864543114543]
+
+Using Matplotlib, I have the following chart:
+![img.png](Images/img_14.png)
+***Insight:***
+- It appears to be true that the older a candidate was, the worse they performed, based on the fact that the line showed a downward trend as the age group got older. It can be explained that since the group of 18 years old were trained with the most current materials and had more available resources to prepare for the exam, they could perform better. Candidates that were older than 18 usually had gap years in between, making their knowledge fade out. 
