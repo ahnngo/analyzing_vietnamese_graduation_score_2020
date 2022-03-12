@@ -4,9 +4,13 @@
 
 ---
 **Overview:**
+
 ●	Exploited Python to curl and clean data of 74000 + candidates, including full names, DOB, and scores for 11 exams.
+
 ●	Utilized rigorously NumPy and Pandas to create 5+ DataFrames for plotting
+
 ●	Utilized Matplotlib, Seaborn, and Pandas built-in visualization tools flexibly draw 10+ charts for testing null hypothesis
+
 ●	Created a database in pgAdmin and extracted output using SQL queries to assess the coding part's accuracy and efficiency and detect errors in the dataset
 
 ---
