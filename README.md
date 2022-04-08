@@ -24,7 +24,7 @@ Tweaked the web scraper scrape 74000+ candidates information from http://diemthi
 *	Biology score
 *	Chemistry score
 *	Physics score
-*	English 
+*	English score
 
 ## Data Cleaning
 After scraping the data, I needed to clean it up so that it was usable for visualization. I made the following changes from the raw HTML code:
